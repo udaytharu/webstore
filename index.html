@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT Mobile Solution - Your one-stop shop for mobile repair, accessories, and professional photography services.">
+    <meta name="keywords" content="mobile repair, phone accessories, photography services, tech solutions">
+    <meta name="author" content="IT Mobile Solution">
+    <title>IT Mobile Solution - Mobile Repair, Accessories & Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="logo">IT Mobile Solution</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#shop">Shop</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart" style="margin-left: 25px;"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+        <!-- Mini Cart Dropdown -->
+        <div class="mini-cart" id="mini-cart">
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homepage Banner -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h1>Welcome to IT Mobile Solution</h1>
+            <p>Mobile Repair | Accessories | Photography Services</p>
+            <a href="#contact" class="cta-btn">Contact us</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2>About Us</h2>
+        <p>We are a small business passionate about technology and creativity. From fixing your mobile devices to providing top-notch accessories and stunning photography, IT Mobile Solution is here to meet all your tech needs.</p>
+        <div>
+            <div class="social-icons">
+                <h3>You can find me on</h3>
+                <a href="#"><i class="fab fa-facebook-f" style="color: blue;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color: rgba(250, 54, 28, 0.952);"></i></a>
+                <a href="#"><i class="fab fa-tiktok" style="color: black;"></i></a>
+                <a href="#"><i class="fab fa-youtube" style="color: red;"></i></a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="fade-in">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="reparing.png" alt="Mobile Repair" loading="lazy">
+                <h3>Mobile Repair</h3>
+                <p>Screen replacement, battery change, water damage repair, and more.</p>
+            </div>
+            <div class="service-card">
+                <img src="accessories.jpg" alt="Accessories" loading="lazy">
+                <h3>Accessories</h3>
+                <p>Chargers, cases, earbuds, and other top-quality products.</p>
+            </div>
+            <div class="service-card">
+                <img src="photography.jpg" alt="Photography" loading="lazy">
+                <h3>Photography</h3>
+                <p>Events, portraits, and commercial photography with a creative touch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="fade-in">
+        <h2>Shop Accessories</h2>
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products...">
+        </div>
+        <div class="products-grid" id="products-grid">
+            <div class="product-card" data-id="1" data-name="Fast Charger" data-price="19.99">
+                <img src="charger.jpg" alt="Fast Charger" loading="lazy">
+                <h3>Fast Charger</h3>
+                <p>NRS 199.99</p>
+                <button class="cta-btn add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Phone Case" data-price="14.99">
+                <img src="cover.jpg" alt="Phone Case" loading="lazy">
+                <h3>Phone Case</h3>
+                <p>NRS 149.9</p>
+                <button class="cta-btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="fade-in">
+        <h2>Photography Gallery</h2>
+        <h3>Welcome to photo Gallery</h3>
+        <div class="gallery-grid">
+            <div>
+                <img src="event.png" alt="Event Photography" loading="lazy">
+                <p>Event Photography</p>
+            </div>
+            <div>
+                <img src="portrait.jpg" alt="Portrait Photography" loading="lazy">
+                <p>Portrait Photography</p>
+            </div>
+            <div>
+                <img src="commercial.jpg" alt="Commercial Photography" loading="lazy">
+                <p>Commercial Photography</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form id="contact-form">
+                <input type="text" id="contact-name" name="name" placeholder="Name" required>
+                <input type="email" id="contact-email" name="email" placeholder="Email" required>
+                <textarea id="contact-message" name="message" placeholder="write a message here and also keep phone number" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div style="margin-top: 2rem;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019787363!2d-122.419415684681!3d37.774929779759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjciTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1635781234567" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- call me button -->
+    <div class="callme-button" onclick="callMe()">
+        <i class="fas fa-phone"></i>
+        Call Me
+    </div>
+
+   <!-- Checkout Modal -->
+   <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-content">
+        <span class="close-checkout">×</span>
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" placeholder="Enter your full address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div class="payment-options">
+                    <label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label>
+                    <p>Mobile Payment is not available at the moment</p>
+                </div>
+            </div>
+            <button type="submit" class="submit-checkout">Place Order</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">×</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="end">Thanks for visiting us.</p>
+        <p>© 2025 <a href="https://www.udayrajchaudhary.com.np/">uday-studio</a>. All rights reserved.</p>
+        <div class="social-icons">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'924befbedfe1b097',t:'MTc0MjcxMjAxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'924c0ca7bbc9b074',t:'MTc0MjcxMzIwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'924c5bae4ed1dd1c',t:'MTc0MjcxNjQzOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
