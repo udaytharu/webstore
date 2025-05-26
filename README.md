@@ -1,2 +1,0 @@
-# webstore
-it mobile solution
