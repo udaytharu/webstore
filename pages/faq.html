@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - IT Mobile Solution</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-section {
+            padding: 120px 1rem 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .faq-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+
+        .faq-category h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--primary);
+        }
+
+        .faq-question h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: var(--card-bg);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.2rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .contact-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            border-radius: 8px;
+        }
+
+        .contact-note p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-note a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-note a:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 100px 1rem 3rem;
+            }
+
+            .faq-section h2 {
+                font-size: 2rem;
+            }
+
+            .faq-category h3 {
+                font-size: 1.5rem;
+            }
+
+            .faq-question h4 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main-header></main-header>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <!-- Mobile Repair FAQs -->
+        <div class="faq-category">
+            <h3>Mobile Repair Services</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What types of mobile repairs do you offer?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a comprehensive range of mobile repair services including:</p>
+                    <ul>
+                        <li>Screen replacement and repair</li>
+                        <li>Battery replacement</li>
+                        <li>Camera repair</li>
+                        <li>Charging port repair</li>
+                        <li>Speaker and microphone repair</li>
+                        <li>Water damage repair</li>
+                        <li>Software issues and updates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>How long does a typical repair take?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Repair times vary depending on the issue and parts availability:</p>
+                    <ul>
+                        <li>Screen replacement: 1-2 hours</li>
+                        <li>Battery replacement: 30-45 minutes</li>
+                        <li>Camera repair: 1-2 hours</li>
+                        <li>Charging port repair: 1-2 hours</li>
+                        <li>Software issues: 30 minutes to 2 hours</li>
+                    </ul>
+                    <p>Complex repairs may take longer, and we'll inform you of the estimated time when you bring in your device.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Do you provide warranty for repairs?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide a 90-day warranty on all repairs and replacement parts. The warranty covers:</p>
+                    <ul>
+                        <li>Manufacturing defects in replacement parts</li>
+                        <li>Workmanship issues</li>
+                        <li>Related problems caused by the repair</li>
+                    </ul>
+                    <p>The warranty does not cover physical damage, water damage, or issues unrelated to the repair.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Should I backup my data before repair?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we strongly recommend backing up your data before any repair service. While we take utmost care with your device, it's always best to have a backup of your important data. We can assist you with:</p>
+                    <ul>
+                        <li>Data backup before repair</li>
+                        <li>Data transfer to a new device</li>
+                        <li>Data recovery services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop & Products FAQs -->
+        <div class="faq-category">
+            <h3>Shop & Products</h3>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What payment methods do you accept?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept various payment methods:</p>
+                    <ul>
+                        <li>Cash</li>
+                        <li>Credit/Debit cards</li>
+                        <li>Mobile payments</li>
+                        <li>Bank transfers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What is your return policy?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our return policy includes:</p>
+                    <ul>
+                        <li>7-day return window for unused products</li>
+                        <li>Products must be in original condition with packaging</li>
+                        <li>Proof of purchase required</li>
+                        <li>Refund processed within 3-5 business days</li>
+                    </ul>
+                    <p>Note: Some items may have different return policies based on manufacturer guidelines.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Do you offer product warranties?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our products come with the following warranty coverage:</p>
+                    <ul>
+                        <li>Manufacturer warranty (varies by product)</li>
+                        <li>Extended warranty options available</li>
+                        <li>Warranty information provided at purchase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photography Services FAQs -->
+        <div class="faq-category">
+            <h3>Photography Services</h3>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What photography services do you offer?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a variety of photography services:</p>
+                    <ul>
+                        <li>Portrait photography</li>
+                        <li>Event photography</li>
+                        <li>Product photography</li>
+                        <li>Photo editing and retouching</li>
+                        <li>Photo printing services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>How do I book a photography session?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>To book a photography session:</p>
+                    <ul>
+                        <li>Contact us through phone or email</li>
+                        <li>Specify the type of session you need</li>
+                        <li>Choose a preferred date and time</li>
+                        <li>Pay a deposit to secure your booking</li>
+                        <li>Receive confirmation and session details</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What is your cancellation policy?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our cancellation policy includes:</p>
+                    <ul>
+                        <li>24-hour notice required for cancellations</li>
+                        <li>Deposit refundable with proper notice</li>
+                        <li>Rescheduling available based on availability</li>
+                        <li>No-shows forfeit deposit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>How long until I receive my photos?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Photo delivery times vary by service:</p>
+                    <ul>
+                        <li>Portrait sessions: 3-5 business days</li>
+                        <li>Event photography: 5-7 business days</li>
+                        <li>Product photography: 2-3 business days</li>
+                        <li>Photo editing: 1-2 business days</li>
+                    </ul>
+                    <p>Rush delivery options are available for an additional fee.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Note -->
+        <div class="contact-note">
+            <p>Still have questions? We're here to help!</p>
+            <p>Contact us at <a href="tel:your-phone-number">Your Phone Number</a> or <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </div>
+    </section>
+
+    <main-footer></main-footer>
+
+    <script src="/js/header.js"></script>
+    <script src="/js//footer.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html> 

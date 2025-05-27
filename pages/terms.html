@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - IT Mobile Solution</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .terms-section {
+            padding: 120px 1rem 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .terms-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .terms-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .terms-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .terms-content h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .terms-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .terms-content p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .terms-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .terms-content li {
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .terms-section {
+                padding: 100px 1rem 3rem;
+            }
+
+            .terms-section h2 {
+                font-size: 2rem;
+            }
+
+            .terms-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .terms-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <i class="fas fa-bars" id="openMenu" onclick="showMenu()"></i>
+            <div class="logo">
+                <h1>IT Mobile Solution</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/index.html#home">Home</a></li>
+                    <li><a href="/index.html#services">Services</a></li>
+                    <li><a href="/pages/shop.html">Shop</a></li>
+                    <li><a href="/pages/gallery.html">Gallery</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Terms Section -->
+    <section class="terms-section">
+        <h2>Terms of Service</h2>
+        <div class="terms-content">
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing and using IT Mobile Solution's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+
+            <h3>2. Services Description</h3>
+            <p>IT Mobile Solution provides the following services:</p>
+            <ul>
+                <li>Mobile device repair and maintenance</li>
+                <li>Photography services</li>
+                <li>Mobile accessories sales</li>
+                <li>Photo editing and printing</li>
+            </ul>
+
+            <h3>3. User Responsibilities</h3>
+            <p>As a customer of IT Mobile Solution, you agree to:</p>
+            <ul>
+                <li>Provide accurate and complete information when using our services</li>
+                <li>Back up your data before any repair service</li>
+                <li>Pay for services as agreed upon</li>
+                <li>Treat our staff and premises with respect</li>
+                <li>Follow our safety and security guidelines</li>
+            </ul>
+
+            <h3>4. Repair Services</h3>
+            <p>For our repair services, the following terms apply:</p>
+            <ul>
+                <li>We provide a 90-day warranty on repairs and replacement parts</li>
+                <li>Warranty does not cover physical damage or water damage after repair</li>
+                <li>We are not responsible for data loss during repairs</li>
+                <li>Repair times are estimates and may vary</li>
+                <li>We reserve the right to refuse service for devices with severe damage</li>
+            </ul>
+
+            <h3>5. Photography Services</h3>
+            <p>For our photography services:</p>
+            <ul>
+                <li>Booking requires a deposit to secure the session</li>
+                <li>Cancellations require 24-hour notice for deposit refund</li>
+                <li>Photo delivery times vary by service type</li>
+                <li>We retain copyright of all photographs</li>
+                <li>Personal use rights are granted to clients</li>
+            </ul>
+
+            <h3>6. Shop and Products</h3>
+            <p>For our shop and products:</p>
+            <ul>
+                <li>Prices are subject to change without notice</li>
+                <li>Products come with manufacturer warranty</li>
+                <li>Returns accepted within 7 days for unused items</li>
+                <li>Products must be in original condition for returns</li>
+                <li>Proof of purchase required for returns and warranty claims</li>
+            </ul>
+
+            <h3>7. Payment Terms</h3>
+            <p>Payment terms and conditions:</p>
+            <ul>
+                <li>Full payment is required before service completion</li>
+                <li>We accept cash, credit/debit cards, and mobile payments</li>
+                <li>Prices are in local currency and include applicable taxes</li>
+                <li>Deposits are non-refundable for no-shows</li>
+            </ul>
+
+            <h3>8. Limitation of Liability</h3>
+            <p>IT Mobile Solution's liability is limited to:</p>
+            <ul>
+                <li>The cost of the service provided</li>
+                <li>Direct damages caused by our negligence</li>
+                <li>Warranty terms as specified for each service</li>
+            </ul>
+            <p>We are not liable for indirect, incidental, or consequential damages.</p>
+
+            <h3>9. Intellectual Property</h3>
+            <p>All content, including but not limited to:</p>
+            <ul>
+                <li>Photographs taken by our photographers</li>
+                <li>Website content and design</li>
+                <li>Service descriptions and pricing</li>
+                <li>Branding and logos</li>
+            </ul>
+            <p>are the property of IT Mobile Solution and protected by copyright laws.</p>
+
+            <h3>10. Changes to Terms</h3>
+            <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to our website. Continued use of our services constitutes acceptance of modified terms.</p>
+
+            <h3>11. Governing Law</h3>
+            <p>These terms are governed by the laws of [Your Country/State]. Any disputes shall be resolved in the courts of [Your Jurisdiction].</p>
+
+            <h3>12. Contact Information</h3>
+            <p>For questions about these terms, please contact us at:</p>
+            <ul>
+                <li>Email: your.email@example.com</li>
+                <li>Phone: Your Phone Number</li>
+                <li>Address: Your Shop Address</li>
+            </ul>
+
+            <p class="last-updated">Last Updated: March 2024</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3>IT Mobile Solution</h3>
+                    <p>Your trusted partner for mobile repairs, photography, and accessories. We provide quality service and products to keep your devices running smoothly.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index.html#home">Home</a></li>
+                        <li><a href="/index.html#services">Services</a></li>
+                        <li><a href="/pages/shop.html">Shop</a></li>
+                        <li><a href="/pages/gallery.html">Gallery</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>Mobile Repair</li>
+                        <li>Screen Replacement</li>
+                        <li>Photography</li>
+                        <li>Mobile Accessories</li>
+                        <li>Photo Editing</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Your Shop Address</li>
+                        <li><i class="fas fa-phone"></i> Your Phone Number</li>
+                        <li><i class="fas fa-envelope"></i> your.email@example.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IT Mobile Solution. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/pages/privacy-policy.html">Privacy Policy</a>
+                    <a href="/pages/terms.html">Terms of Service</a>
+                    <a href="/pages/faq.html">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 
